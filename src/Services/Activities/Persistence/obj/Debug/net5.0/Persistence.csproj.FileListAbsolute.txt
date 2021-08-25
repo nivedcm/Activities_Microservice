@@ -1,0 +1,15 @@
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\bin\Debug\net5.0\Persistence.deps.json
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\bin\Debug\net5.0\Persistence.dll
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\bin\Debug\net5.0\ref\Persistence.dll
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\bin\Debug\net5.0\Persistence.pdb
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\bin\Debug\net5.0\Domain.dll
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\bin\Debug\net5.0\Domain.pdb
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\obj\Debug\net5.0\Persistence.csproj.AssemblyReference.cache
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\obj\Debug\net5.0\Persistence.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\obj\Debug\net5.0\Persistence.AssemblyInfoInputs.cache
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\obj\Debug\net5.0\Persistence.AssemblyInfo.cs
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\obj\Debug\net5.0\Persistence.csproj.CoreCompileInputs.cache
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\obj\Debug\net5.0\Persistence.csproj.CopyComplete
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\obj\Debug\net5.0\Persistence.dll
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\obj\Debug\net5.0\ref\Persistence.dll
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Persistence\obj\Debug\net5.0\Persistence.pdb
