@@ -21,9 +21,10 @@ namespace Booking.API.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<Event> GetEvents()
+        public async Task<IEnumerable<Event>> GetEventsAsync()
         {
-            return (IEnumerable<Event>)_repository.GetEvents();
+            var events = await _repository.GetEvents();
+            return events;
         }
     }
 }
