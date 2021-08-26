@@ -1,25 +1,65 @@
 services:
-  booking.api:
+  activities.api:
     build:
-      context: E:\WorkSpace\microservices\Activities_microservice\src
-      dockerfile: E:\WorkSpace\microservices\Activities_microservice\src\Services\Bookings\Booking.API\Dockerfile
-    container_name: booking.api
+      context: D:\Workspace\Projects\Microservices\Activities_Microservice\src
+      dockerfile: D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Activities.API\Dockerfile
+    container_name: activities.api
     depends_on:
-      bookingDb:
+      activitiesdb:
         condition: service_started
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      DatabaseSettings:ConnectionString: mongodb://bookingDb:27017
+      ConnectionStrings:DefaultConnection: Server=activitiesdb;Port=5432;Database=ActivitiesDb;User
+        Id=postgres;Password=password;
+    image: activitiesapi
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: 8000
+      protocol: tcp
+  activitiesdb:
+    container_name: activitiesdb
+    environment:
+      POSTGRES_DB: ActivitiesDb
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+    image: postgres
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 5432
+      published: 5432
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: postgres_data
+      target: /var/lib/postgresql/data/
+      volume: {}
+  booking.api:
+    build:
+      context: D:\Workspace\Projects\Microservices\Activities_Microservice\src
+      dockerfile: D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Bookings\Booking.API\Dockerfile
+    container_name: booking.api
+    depends_on:
+      bookingdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DatabaseSettings:ConnectionString: mongodb://bookingdb:27017
     image: bookingapi
     networks:
       default: null
     ports:
     - mode: ingress
       target: 80
-      published: 6001
+      published: 8001
       protocol: tcp
-  bookingDb:
-    container_name: bookingDb
+  bookingdb:
+    container_name: bookingdb
     image: mongo
     networks:
       default: null
@@ -34,9 +74,32 @@ services:
       source: mongo_data
       target: /data/db
       volume: {}
+  pgadmin:
+    container_name: pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: dev@mail.com
+      PGADMIN_DEFAULT_PASSWORD: password
+    image: dpage/pgadmin4
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      published: 5050
+      protocol: tcp
+    restart: always
+    volumes:
+    - type: volume
+      source: pgadmin_data
+      target: /root/.pgadmin
+      volume: {}
 networks:
   default:
-    name: dockercompose1716024832730829480_default
+    name: dockercompose11194751841052800209_default
 volumes:
   mongo_data:
-    name: dockercompose1716024832730829480_mongo_data
+    name: dockercompose11194751841052800209_mongo_data
+  pgadmin_data:
+    name: dockercompose11194751841052800209_pgadmin_data
+  postgres_data:
+    name: dockercompose11194751841052800209_postgres_data

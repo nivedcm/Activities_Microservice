@@ -787,19 +787,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\qbuser\\.nuget\\packages\\": {}
+    "C:\\Users\\nived\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\WorkSpace\\microservices\\Activities_microservice\\src\\Services\\Activities\\Application\\Application.csproj",
+      "projectUniqueName": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Application\\Application.csproj",
       "projectName": "Application",
-      "projectPath": "E:\\WorkSpace\\microservices\\Activities_microservice\\src\\Services\\Activities\\Application\\Application.csproj",
-      "packagesPath": "C:\\Users\\qbuser\\.nuget\\packages\\",
-      "outputPath": "E:\\WorkSpace\\microservices\\Activities_microservice\\src\\Services\\Activities\\Application\\obj\\",
+      "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Application\\Application.csproj",
+      "packagesPath": "C:\\Users\\nived\\.nuget\\packages\\",
+      "outputPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Application\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\qbuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nived\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -813,11 +813,11 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "E:\\WorkSpace\\microservices\\Activities_microservice\\src\\Services\\Activities\\Domain\\Domain.csproj": {
-              "projectPath": "E:\\WorkSpace\\microservices\\Activities_microservice\\src\\Services\\Activities\\Domain\\Domain.csproj"
+            "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Domain\\Domain.csproj": {
+              "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Domain\\Domain.csproj"
             },
-            "E:\\WorkSpace\\microservices\\Activities_microservice\\src\\Services\\Activities\\Persistence\\Persistence.csproj": {
-              "projectPath": "E:\\WorkSpace\\microservices\\Activities_microservice\\src\\Services\\Activities\\Persistence\\Persistence.csproj"
+            "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Persistence\\Persistence.csproj": {
+              "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Persistence\\Persistence.csproj"
             }
           }
         }

@@ -2,8 +2,14 @@ version: '3.4'
 
 services:
 
-  bookingDb:
+  bookingdb:
     image: mongo
+
+  activitiesdb:
+    image: postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
 
   booking.api:
     image: ${DOCKER_REGISTRY-}bookingapi
@@ -11,5 +17,13 @@ services:
       context: .
       dockerfile: Services/Bookings/Booking.API/Dockerfile
 
+  activities.api:
+    image: ${DOCKER_REGISTRY-}activitiesapi
+    build:
+      context: .
+      dockerfile: Services/Activities/Activities.API/Dockerfile
+
 volumes:
   mongo_data: 
+  postgres_data:
+  pgadmin_data:

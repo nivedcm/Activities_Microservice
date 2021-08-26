@@ -1,6 +1,32 @@
 version: '3.4'
 
 services:
+  activities.api:
+    image: activitiesapi:dev
+    build:
+      target: base
+      labels:
+        com.microsoft.created-by: "visual-studio"
+        com.microsoft.visual-studio.project-name: "Activities.API"
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
+      - NUGET_FALLBACK_PACKAGES=
+    volumes:
+      - D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Activities.API:/app
+      - D:\Workspace\Projects\Microservices\Activities_Microservice\src:/src
+      - C:\Users\nived\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\nived\.nuget\packages\:/root/.nuget/packages:ro
+      - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
+      - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
+
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      com.microsoft.visualstudio.debuggee.arguments: " --additionalProbingPath /root/.nuget/packages  \"/app/bin/Debug/net5.0/Activities.API.dll\""
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/sh -c \"if PID=$$(pidof dotnet); then kill $$PID; fi\""
+    tty: true
   booking.api:
     image: bookingapi:dev
     build:
@@ -13,10 +39,10 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=
     volumes:
-      - E:\WorkSpace\microservices\Activities_microservice\src\Services\Bookings\Booking.API:/app
-      - E:\WorkSpace\microservices\Activities_microservice\src:/src
-      - C:\Users\qbuser\vsdbg\vs2017u5:/remote_debugger:rw
-      - C:\Users\qbuser\.nuget\packages\:/root/.nuget/packages:ro
+      - D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Bookings\Booking.API:/app
+      - D:\Workspace\Projects\Microservices\Activities_Microservice\src:/src
+      - C:\Users\nived\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\nived\.nuget\packages\:/root/.nuget/packages:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
 

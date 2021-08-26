@@ -2,20 +2,55 @@ version: '3.4'
 
 services:
 
-  bookingDb:
-    container_name: bookingDb
+  bookingdb:
+    container_name: bookingdb
     restart: always 
     ports:
        - "27017:27017"
     volumes:
      - mongo_data:/data/db
 
+  activitiesdb:
+    container_name: activitiesdb
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=ActivitiesDb
+    restart: always 
+    ports:
+       - "5432:5432"
+    volumes:
+     - postgres_data:/var/lib/postgresql/data/
+
   booking.api:
     container_name: booking.api
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "DatabaseSettings:ConnectionString=mongodb://bookingDb:27017"
+      - "DatabaseSettings:ConnectionString=mongodb://bookingdb:27017"
     depends_on:
-      - bookingDb
+      - bookingdb
     ports:
-      - "6001:80"
+      - "8001:80"
+
+
+  pgadmin:
+    container_name: pgadmin
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=dev@mail.com
+      - PGADMIN_DEFAULT_PASSWORD=password
+    restart: always 
+    ports:
+       - "5050:80"
+    volumes:
+     - pgadmin_data:/root/.pgadmin
+
+
+  activities.api:
+     container_name: activities.api
+     environment:
+       - ASPNETCORE_ENVIRONMENT=Development
+       - "ConnectionStrings:DefaultConnection=Server=activitiesdb;Port=5432;Database=ActivitiesDb;User Id=postgres;Password=password;"
+     depends_on:
+       - activitiesdb
+     ports:
+       - "8000:80"
