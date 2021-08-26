@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+
+  bookingDb:
+    container_name: bookingDb
+    restart: always 
+    ports:
+       - "27017:27017"
+    volumes:
+     - mongo_data:/data/db
+
+  booking.api:
+    container_name: booking.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "DatabaseSettings:ConnectionString=mongodb://bookingDb:27017"
+    depends_on:
+      - bookingDb
+    ports:
+      - "6001:80"

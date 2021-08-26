@@ -1,0 +1,15 @@
+version: '3.4'
+
+services:
+
+  bookingDb:
+    image: mongo
+
+  booking.api:
+    image: ${DOCKER_REGISTRY-}bookingapi
+    build:
+      context: .
+      dockerfile: Services/Bookings/Booking.API/Dockerfile
+
+volumes:
+  mongo_data: 
