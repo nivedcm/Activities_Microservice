@@ -15,7 +15,13 @@ E:\WorkSpace\microservices\Activities_microservice\src\Services\Activities\Appli
 E:\WorkSpace\microservices\Activities_microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.dll
 E:\WorkSpace\microservices\Activities_microservice\src\Services\Activities\Application\obj\Debug\net5.0\ref\Application.dll
 E:\WorkSpace\microservices\Activities_microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.pdb
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.AssemblyInfoInputs.cache
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.AssemblyInfo.cs
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.csproj.CoreCompileInputs.cache
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\bin\Debug\net5.0\Application.deps.json
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\bin\Debug\net5.0\Application.runtimeconfig.json
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\bin\Debug\net5.0\Application.runtimeconfig.dev.json
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\bin\Debug\net5.0\Application.dll
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\bin\Debug\net5.0\ref\Application.dll
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\bin\Debug\net5.0\Application.pdb
@@ -24,11 +30,8 @@ D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activit
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\bin\Debug\net5.0\Domain.pdb
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\bin\Debug\net5.0\Persistence.pdb
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.csproj.AssemblyReference.cache
-D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.GeneratedMSBuildEditorConfig.editorconfig
-D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.AssemblyInfoInputs.cache
-D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.AssemblyInfo.cs
-D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.csproj.CoreCompileInputs.cache
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.csproj.CopyComplete
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.dll
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\ref\Application.dll
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.pdb
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Application\obj\Debug\net5.0\Application.genruntimeconfig.cache

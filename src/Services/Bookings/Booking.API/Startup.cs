@@ -1,5 +1,6 @@
 using Booking.API.Data;
 using Booking.API.Repositories;
+using MassTransit;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -36,6 +37,14 @@ namespace Booking.API
 
             services.AddScoped<IEventRepository, EventRepository>();
             services.AddScoped<IBookingContext, BookingContext>();
+
+            //services.AddMassTransit(config =>
+            //{
+            //    config.UsingRabbitMq((ctx, cfg)=>
+            //    {
+            //        cfg.Host(")
+            //    })
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -9,6 +9,11 @@ namespace Persistence
         {
 
         }
+        public DataContext()
+        {
+
+        }
+
         public DbSet<Activity> Activities { get; set; }
     }
 }

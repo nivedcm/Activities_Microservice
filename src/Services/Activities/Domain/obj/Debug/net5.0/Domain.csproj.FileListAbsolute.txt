@@ -14,7 +14,6 @@ D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activit
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\bin\Debug\net5.0\Domain.dll
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\bin\Debug\net5.0\ref\Domain.dll
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\bin\Debug\net5.0\Domain.pdb
-D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
@@ -22,3 +21,4 @@ D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activit
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.dll
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\ref\Domain.dll
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.pdb
+D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
