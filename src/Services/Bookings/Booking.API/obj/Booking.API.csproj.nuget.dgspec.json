@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj": {}
+    "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj": {}
   },
   "projects": {
-    "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj": {
+    "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj",
+        "projectUniqueName": "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj",
         "projectName": "Booking.API",
-        "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj",
-        "packagesPath": "C:\\Users\\nived\\.nuget\\packages\\",
-        "outputPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Bookings\\Booking.API\\obj\\",
+        "projectPath": "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj",
+        "packagesPath": "C:\\Users\\qbuser\\.nuget\\packages\\",
+        "outputPath": "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Bookings\\Booking.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nived\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\qbuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

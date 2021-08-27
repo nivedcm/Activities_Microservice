@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Domain\\Domain.csproj": {}
+    "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Activities\\Domain\\Domain.csproj": {}
   },
   "projects": {
-    "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Domain\\Domain.csproj": {
+    "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Activities\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Domain\\Domain.csproj",
+        "projectUniqueName": "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Activities\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\nived\\.nuget\\packages\\",
-        "outputPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice\\src\\Services\\Activities\\Domain\\obj\\",
+        "projectPath": "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Activities\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\qbuser\\.nuget\\packages\\",
+        "outputPath": "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Activities\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\nived\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\qbuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

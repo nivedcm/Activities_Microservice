@@ -1,8 +1,8 @@
 services:
   activities.api:
     build:
-      context: D:\Workspace\Projects\Microservices\Activities_Microservice\src
-      dockerfile: D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Activities.API\Dockerfile
+      context: E:\WorkSpace\microservices\activities_v3\src
+      dockerfile: E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Activities.API\Dockerfile
       labels:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: Activities.API
@@ -39,34 +39,34 @@ services:
     tty: true
     volumes:
     - type: bind
-      source: D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Activities.API
+      source: E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Activities.API
       target: /app
       bind:
         create_host_path: true
     - type: bind
-      source: D:\Workspace\Projects\Microservices\Activities_Microservice\src
+      source: E:\WorkSpace\microservices\activities_v3\src
       target: /src
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\nived\vsdbg\vs2017u5
+      source: C:\Users\qbuser\vsdbg\vs2017u5
       target: /remote_debugger
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\nived\.nuget\packages\
+      source: C:\Users\qbuser\.nuget\packages\
       target: /root/.nuget/packages
       read_only: true
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\nived\AppData\Roaming/ASP.NET/Https
+      source: C:\Users\qbuser\AppData\Roaming/ASP.NET/Https
       target: /root/.aspnet/https
       read_only: true
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\nived\AppData\Roaming/Microsoft/UserSecrets
+      source: C:\Users\qbuser\AppData\Roaming/Microsoft/UserSecrets
       target: /root/.microsoft/usersecrets
       read_only: true
       bind:
@@ -93,8 +93,8 @@ services:
       volume: {}
   booking.api:
     build:
-      context: D:\Workspace\Projects\Microservices\Activities_Microservice\src
-      dockerfile: D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Bookings\Booking.API\Dockerfile
+      context: E:\WorkSpace\microservices\activities_v3\src
+      dockerfile: E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API\Dockerfile
       labels:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: Booking.API
@@ -130,34 +130,34 @@ services:
     tty: true
     volumes:
     - type: bind
-      source: D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Bookings\Booking.API
+      source: E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API
       target: /app
       bind:
         create_host_path: true
     - type: bind
-      source: D:\Workspace\Projects\Microservices\Activities_Microservice\src
+      source: E:\WorkSpace\microservices\activities_v3\src
       target: /src
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\nived\vsdbg\vs2017u5
+      source: C:\Users\qbuser\vsdbg\vs2017u5
       target: /remote_debugger
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\nived\.nuget\packages\
+      source: C:\Users\qbuser\.nuget\packages\
       target: /root/.nuget/packages
       read_only: true
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\nived\AppData\Roaming/ASP.NET/Https
+      source: C:\Users\qbuser\AppData\Roaming/ASP.NET/Https
       target: /root/.aspnet/https
       read_only: true
       bind:
         create_host_path: true
     - type: bind
-      source: C:\Users\nived\AppData\Roaming/Microsoft/UserSecrets
+      source: C:\Users\qbuser\AppData\Roaming/Microsoft/UserSecrets
       target: /root/.microsoft/usersecrets
       read_only: true
       bind:
@@ -199,11 +199,11 @@ services:
       volume: {}
 networks:
   default:
-    name: dockercompose11194751841052800209_default
+    name: dockercompose7779393614598495288_default
 volumes:
   mongo_data:
-    name: dockercompose11194751841052800209_mongo_data
+    name: dockercompose7779393614598495288_mongo_data
   pgadmin_data:
-    name: dockercompose11194751841052800209_pgadmin_data
+    name: dockercompose7779393614598495288_pgadmin_data
   postgres_data:
-    name: dockercompose11194751841052800209_postgres_data
+    name: dockercompose7779393614598495288_postgres_data

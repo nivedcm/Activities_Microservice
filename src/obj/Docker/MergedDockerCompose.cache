@@ -1,8 +1,8 @@
 services:
   activities.api:
     build:
-      context: D:\Workspace\Projects\Microservices\Activities_Microservice\src
-      dockerfile: D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Activities.API\Dockerfile
+      context: E:\WorkSpace\microservices\activities_v3\src
+      dockerfile: E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Activities.API\Dockerfile
     container_name: activities.api
     depends_on:
       activitiesdb:
@@ -41,8 +41,8 @@ services:
       volume: {}
   booking.api:
     build:
-      context: D:\Workspace\Projects\Microservices\Activities_Microservice\src
-      dockerfile: D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Bookings\Booking.API\Dockerfile
+      context: E:\WorkSpace\microservices\activities_v3\src
+      dockerfile: E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API\Dockerfile
     container_name: booking.api
     depends_on:
       bookingdb:
@@ -95,11 +95,11 @@ services:
       volume: {}
 networks:
   default:
-    name: dockercompose11194751841052800209_default
+    name: dockercompose7779393614598495288_default
 volumes:
   mongo_data:
-    name: dockercompose11194751841052800209_mongo_data
+    name: dockercompose7779393614598495288_mongo_data
   pgadmin_data:
-    name: dockercompose11194751841052800209_pgadmin_data
+    name: dockercompose7779393614598495288_pgadmin_data
   postgres_data:
-    name: dockercompose11194751841052800209_postgres_data
+    name: dockercompose7779393614598495288_postgres_data

@@ -22,3 +22,14 @@ D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activit
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\ref\Domain.dll
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.pdb
 D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\bin\Debug\net5.0\Domain.deps.json
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\bin\Debug\net5.0\Domain.dll
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\bin\Debug\net5.0\ref\Domain.dll
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\bin\Debug\net5.0\Domain.pdb
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.AssemblyInfoInputs.cache
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.AssemblyInfo.cs
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.csproj.CoreCompileInputs.cache
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.dll
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\ref\Domain.dll
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.pdb

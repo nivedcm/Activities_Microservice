@@ -13,10 +13,10 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=
     volumes:
-      - D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Activities\Activities.API:/app
-      - D:\Workspace\Projects\Microservices\Activities_Microservice\src:/src
-      - C:\Users\nived\vsdbg\vs2017u5:/remote_debugger:rw
-      - C:\Users\nived\.nuget\packages\:/root/.nuget/packages:ro
+      - E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Activities.API:/app
+      - E:\WorkSpace\microservices\activities_v3\src:/src
+      - C:\Users\qbuser\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\qbuser\.nuget\packages\:/root/.nuget/packages:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
 
@@ -39,10 +39,10 @@ services:
       - ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS=true
       - NUGET_FALLBACK_PACKAGES=
     volumes:
-      - D:\Workspace\Projects\Microservices\Activities_Microservice\src\Services\Bookings\Booking.API:/app
-      - D:\Workspace\Projects\Microservices\Activities_Microservice\src:/src
-      - C:\Users\nived\vsdbg\vs2017u5:/remote_debugger:rw
-      - C:\Users\nived\.nuget\packages\:/root/.nuget/packages:ro
+      - E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API:/app
+      - E:\WorkSpace\microservices\activities_v3\src:/src
+      - C:\Users\qbuser\vsdbg\vs2017u5:/remote_debugger:rw
+      - C:\Users\qbuser\.nuget\packages\:/root/.nuget/packages:ro
       - ${APPDATA}/ASP.NET/Https:/root/.aspnet/https:ro
       - ${APPDATA}/Microsoft/UserSecrets:/root/.microsoft/usersecrets:ro
 
