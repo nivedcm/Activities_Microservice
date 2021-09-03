@@ -33,3 +33,4 @@ E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debu
 E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.dll
 E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\ref\Domain.dll
 E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.pdb
+E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Domain\obj\Debug\net5.0\Domain.csproj.AssemblyReference.cache

@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using Microsoft.AspNetCore.Mvc;
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 using System;
 using System.Collections.Generic;
@@ -23,5 +24,9 @@ namespace Booking.API.Entities
         public decimal Price { get; set; }
         public int Seats { get; set; }
 
+        public static explicit operator Event(ActionResult<Event> v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

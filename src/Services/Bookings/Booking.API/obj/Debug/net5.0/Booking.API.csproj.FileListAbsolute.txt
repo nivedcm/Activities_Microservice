@@ -142,3 +142,4 @@ E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API\obj\D
 E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API\obj\Debug\net5.0\ref\Booking.API.dll
 E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API\obj\Debug\net5.0\Booking.API.pdb
 E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API\obj\Debug\net5.0\Booking.API.genruntimeconfig.cache
+E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API\obj\Debug\net5.0\Booking.API.csproj.AssemblyReference.cache

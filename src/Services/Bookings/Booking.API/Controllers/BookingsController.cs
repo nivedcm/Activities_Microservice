@@ -1,8 +1,6 @@
 ﻿using Booking.API.Entities;
 using Booking.API.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Net;
@@ -15,26 +13,24 @@ namespace Booking.API.Controllers
     public class BookingsController : ControllerBase
     {
         private readonly IEventRepository _repository;
-        private readonly ILogger<BookingsController> _logger;
 
-        public BookingsController(IEventRepository repository, ILogger<BookingsController> logger)
+        public BookingsController(IEventRepository repository)
         {
             _repository = repository ?? throw new ArgumentNullException();
-            _logger = logger ?? throw new ArgumentNullException(nameof(logger));
         }
 
         [HttpGet]
         [ProducesResponseType(typeof(IEnumerable<Event>), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<IEnumerable<Event>>> GetProducts()
+        public async Task<ActionResult<IEnumerable<Event>>> GetEvents()
         {
-            var products = await _repository.GetEvents();
-            return Ok(products);
+            var events = await _repository.GetEvents();
+            return Ok(events);
         }
 
         [HttpGet("{id}", Name = "GetEvent")]
         [ProducesResponseType((int)HttpStatusCode.NotFound)]
         [ProducesResponseType(typeof(Event), (int)HttpStatusCode.OK)]
-        public async Task<ActionResult<Event>> GetProductById(string id)
+        public async Task<ActionResult<Event>> GetEventById(string id)
         {
             var eventResult = await _repository.GetEvents(id);
             if (eventResult == null)
@@ -49,8 +45,8 @@ namespace Booking.API.Controllers
         [ProducesResponseType(typeof(IEnumerable<Event>), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<IEnumerable<Event>>> GetEventsByCategory(string category)
         {
-            var products = await _repository.GetEventsByCategory(category);
-            return Ok(products);
+            var events = await _repository.GetEventsByCategory(category);
+            return Ok(events);
         }
 
         [HttpPost]
