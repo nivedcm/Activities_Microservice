@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Application.Repositories;
+using Domain;
 using MediatR;
 using Persistence;
 using System.Threading;
@@ -15,18 +16,17 @@ namespace Application.Activities
 
         public class Handler : IRequestHandler<Command>
         {
-            private readonly DataContext _context;
+            private readonly IActivitiesRepository _activitiesRepository;
 
-            public Handler(DataContext context)
+            public Handler(IActivitiesRepository activitiesRepository)
             {
-                _context = context;
+                _activitiesRepository = activitiesRepository;
             }
 
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
-                _context.Activities.Add(request.Activity);
-                await _context.SaveChangesAsync();
-                return Unit.Value;
+                var result =  await _activitiesRepository.CreateActivities(request.Activity);
+                return result;
             }
         }
     }

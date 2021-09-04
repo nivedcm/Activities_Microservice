@@ -1,4 +1,5 @@
 ﻿using Domain;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,10 @@ namespace Application.Repositories
 {
     public interface IActivitiesRepository
     {
-        Task<Activity> GetActivities();
+        Task<List<Activity>> GetActivities();
+        Task<Activity> GetActivity(Guid id);
+        Task<Unit> CreateActivities(Activity activity);
+        Task<Unit> EditActivity(Activity activity);
+        Task<Unit> DeleteActivity(Guid id);
     }
 }

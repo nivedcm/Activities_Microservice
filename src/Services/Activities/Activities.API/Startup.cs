@@ -1,5 +1,6 @@
 using Application.Activities;
 using Application.Helpers;
+using Application.Repositories;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -44,6 +45,7 @@ namespace Activities.API
                 });
             });
 
+            services.AddScoped<IActivitiesRepository, ActivitiesRepository>();
             services.AddMediatR(typeof(List.Handler).Assembly);
             services.AddAutoMapper(typeof(MappingProfile).Assembly);
 

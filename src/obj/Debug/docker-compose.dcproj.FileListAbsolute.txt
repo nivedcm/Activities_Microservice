@@ -42,3 +42,8 @@ E:\WorkSpace\microservices\activities_v3\src\bin\Debug\Application.pdb
 E:\WorkSpace\microservices\activities_v3\src\obj\Debug\docker-compose.dcproj.AssemblyReference.cache
 E:\WorkSpace\microservices\activities_v3\src\obj\Debug\docker-compose.dcproj.CoreCompileInputs.cache
 E:\WorkSpace\microservices\activities_v3\src\obj\Debug\docker-compose.dcproj.CopyComplete
+E:\WorkSpace\microservices\activities_v3\src\bin\Debug\EntityFramework.dll
+E:\WorkSpace\microservices\activities_v3\src\bin\Debug\System.CodeDom.dll
+E:\WorkSpace\microservices\activities_v3\src\bin\Debug\System.Configuration.ConfigurationManager.dll
+E:\WorkSpace\microservices\activities_v3\src\bin\Debug\System.Data.SqlClient.dll
+E:\WorkSpace\microservices\activities_v3\src\bin\Debug\System.Security.Cryptography.ProtectedData.dll

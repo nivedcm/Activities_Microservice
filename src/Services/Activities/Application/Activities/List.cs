@@ -1,4 +1,5 @@
-﻿using Domain;
+﻿using Application.Repositories;
+using Domain;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Persistence;
@@ -13,16 +14,16 @@ namespace Application.Activities
         public class Query : IRequest<List<Activity>> { }
         public class Handler : IRequestHandler<Query, List<Activity>>
         {
-            private readonly DataContext _context;
+            private readonly IActivitiesRepository _activitiesRepository;
 
-            public Handler(DataContext context)
+            public Handler(IActivitiesRepository activitiesRepository)
             {
-                _context = context;
+                _activitiesRepository = activitiesRepository;
             }
 
             public async Task<List<Activity>> Handle(Query request, CancellationToken cancellationToken)
             {
-                return await _context.Activities.ToListAsync();
+                return await _activitiesRepository.GetActivities();
             }
         }
     }

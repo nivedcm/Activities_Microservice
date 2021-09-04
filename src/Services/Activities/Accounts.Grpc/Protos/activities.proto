@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option csharp_namespace = "Accounts.Grpc.Protos";
+
+service ActivitiesProtoService {
+
+	rpc GetActivities (GetActivitiesRequest) returns (ActivitiesModel);
+	rpc CreateActivities (CreateActivitiesRequest) returns (ActivitiesModel);
+	rpc UpdateActivities (UpdateActivitiesRequest) returns (ActivitiesModel);
+	rpc DeleteActivities (DeleteActivitiesRequest) returns (DeleteActivitiesResponse);
+}
+
+message GetActivitiesRequest {
+    string Id = 1;
+}
+
+message ActivitiesModel {
+	
+}

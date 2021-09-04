@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿using Application.Repositories;
+using AutoMapper;
 using Domain;
 using MediatR;
 using Persistence;
@@ -16,20 +17,17 @@ namespace Application.Activities
 
         public class Handler : IRequestHandler<Command>
         {
-            private readonly IMapper _mapper;
-            private readonly DataContext _context;
-            public Handler(DataContext context, IMapper mapper)
+            private readonly IActivitiesRepository _activitiesRepository;
+
+            public Handler(IActivitiesRepository activitiesRepository)
             {
-                _context = context;
-                _mapper = mapper;
+                _activitiesRepository = activitiesRepository;
             }
 
             public async Task<Unit> Handle(Command request, CancellationToken cancellationToken)
             {
-                var activity = await _context.Activities.FindAsync(request.Activity.Id);
-                _mapper.Map(request.Activity, activity);
-                await _context.SaveChangesAsync();
-                return Unit.Value;
+                var activity = await _activitiesRepository.EditActivity(request.Activity);
+                return activity;
             }
         }
     }

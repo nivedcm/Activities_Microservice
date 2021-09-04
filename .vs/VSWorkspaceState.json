@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\src"
+    "\\src",
+    "\\src\\Services",
+    "\\src\\Services\\Bookings",
+    "\\src\\Services\\Bookings\\Booking.UnitTests"
   ],
+  "SelectedNode": "\\src\\Services\\Bookings\\Booking.UnitTests\\BookingsControllerTests.cs",
   "PreviewInSolutionExplorer": false
 }

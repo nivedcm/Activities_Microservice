@@ -1,4 +1,5 @@
 ﻿using Application.Activities;
+using Application.Repositories;
 using Domain;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -9,6 +10,11 @@ namespace API.Controllers
 {
     public class ActivitiesController : BaseApiController
     {
+        private readonly IActivitiesRepository _activitiesRepository;
+        public ActivitiesController(IActivitiesRepository activitiesRepository)
+        {
+            _activitiesRepository = activitiesRepository;
+        }
 
         [HttpGet]
         public async Task<ActionResult<List<Activity>>>GetActivities()
