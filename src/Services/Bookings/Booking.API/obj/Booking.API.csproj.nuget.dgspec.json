@@ -1,20 +1,91 @@
 {
   "format": 1,
   "restore": {
-    "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj": {}
+    "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj": {}
   },
   "projects": {
-    "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj": {
+    "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj",
-        "projectName": "Booking.API",
-        "projectPath": "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj",
-        "packagesPath": "C:\\Users\\qbuser\\.nuget\\packages\\",
-        "outputPath": "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Bookings\\Booking.API\\obj\\",
+        "projectUniqueName": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Application\\Application.csproj",
+        "projectName": "Application",
+        "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\nived\\.nuget\\packages\\",
+        "outputPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\qbuser\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\nived\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Domain\\Domain.csproj"
+              },
+              "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Persistence\\Persistence.csproj": {
+                "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Persistence\\Persistence.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Domain\\Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Domain\\Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\nived\\.nuget\\packages\\",
+        "outputPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nived\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,7 +110,151 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Persistence\\Persistence.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Persistence\\Persistence.csproj",
+        "projectName": "Persistence",
+        "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Persistence\\Persistence.csproj",
+        "packagesPath": "C:\\Users\\nived\\.nuget\\packages\\",
+        "outputPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Persistence\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nived\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Domain\\Domain.csproj": {
+                "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Domain\\Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[5.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[5.0.7, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj",
+        "projectName": "Booking.API",
+        "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Bookings\\Booking.API\\Booking.API.csproj",
+        "packagesPath": "C:\\Users\\nived\\.nuget\\packages\\",
+        "outputPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Bookings\\Booking.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\nived\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Application\\Application.csproj": {
+                "projectPath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Application\\Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.32.0, )"
+            },
             "MassTransit": {
               "target": "Package",
               "version": "[7.2.2, )"

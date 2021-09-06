@@ -1,4 +1,5 @@
 ﻿using Booking.API.Entities;
+using Booking.API.GrpcServices;
 using Booking.API.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,9 +14,11 @@ namespace Booking.API.Controllers
     public class BookingsController : ControllerBase
     {
         private readonly IEventRepository _repository;
+        private readonly ActivitiesGrpcService _activitiesGrpcService;
 
-        public BookingsController(IEventRepository repository)
+        public BookingsController(IEventRepository repository, ActivitiesGrpcService activitiesGrpcService)
         {
+            _activitiesGrpcService = activitiesGrpcService;
             _repository = repository ?? throw new ArgumentNullException();
         }
 
@@ -53,7 +56,12 @@ namespace Booking.API.Controllers
         [ProducesResponseType(typeof(Event), (int)HttpStatusCode.OK)]
         public async Task<ActionResult<Event>> CreateEvent([FromBody] Event eventModel)
         {
+            //Grpc wired up, Testing out Grpc call here
+
+            var activity = await _activitiesGrpcService.GetActivities(eventModel.Id.ToString());
+
             await _repository.CreateEvent(eventModel);
+
             return CreatedAtRoute("GetEvent", new { id = eventModel.Id }, eventModel);
         }
 

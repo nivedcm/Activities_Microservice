@@ -27,11 +27,11 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - "DatabaseSettings:ConnectionString=mongodb://bookingdb:27017"
+      - "GrpcSettings:ActivitiesUri=accounts.grpc"
     depends_on:
       - bookingdb
     ports:
       - "8001:80"
-
 
   pgadmin:
     container_name: pgadmin
@@ -44,7 +44,6 @@ services:
     volumes:
      - pgadmin_data:/root/.pgadmin
 
-
   activities.api:
      container_name: activities.api
      environment:
@@ -54,3 +53,13 @@ services:
        - activitiesdb
      ports:
        - "8000:80"
+
+  accounts.grpc:
+    container_name: accounts.grpc 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:DefaultConnection=User ID=postgres;Password=password;Server=activitiesdb;Port=5432;"
+    depends_on:
+      - activitiesdb
+    ports:
+      - "8003:80"

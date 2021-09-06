@@ -1,76 +1,35 @@
 services:
+  accounts.grpc:
+    build:
+      context: D:\Workspace\Projects\Microservices\Activities_Microservice_v3\src
+      dockerfile: Services/Activities/Accounts.Grpc/Dockerfile
+    container_name: accounts.grpc
+    depends_on:
+      activitiesdb:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings:DefaultConnection: User ID=postgres;Password=password;Server=activitiesdb;Port=5432;
+    image: accountsgrpc
+    ports:
+    - published: 8003
+      target: 80
   activities.api:
     build:
-      context: E:\WorkSpace\microservices\activities_v3\src
-      dockerfile: E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Activities.API\Dockerfile
-      labels:
-        com.microsoft.created-by: visual-studio
-        com.microsoft.visual-studio.project-name: Activities.API
-      target: base
+      context: D:\Workspace\Projects\Microservices\Activities_Microservice_v3\src
+      dockerfile: Services/Activities/Activities.API/Dockerfile
     container_name: activities.api
     depends_on:
       activitiesdb:
         condition: service_started
-    entrypoint:
-    - tail
-    - -f
-    - /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       ConnectionStrings:DefaultConnection: Server=activitiesdb;Port=5432;Database=ActivitiesDb;User
         Id=postgres;Password=password;
-      DOTNET_USE_POLLING_FILE_WATCHER: "1"
-      NUGET_FALLBACK_PACKAGES: ""
-    image: activitiesapi:dev
-    labels:
-      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/Activities.API.dll"'
-      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$(pidof
-        dotnet); then kill $PID; fi"
-      com.microsoft.visualstudio.debuggee.program: dotnet
-      com.microsoft.visualstudio.debuggee.workingdirectory: /app
-    networks:
-      default: null
+    image: activitiesapi
     ports:
-    - mode: ingress
+    - published: 8000
       target: 80
-      published: 8000
-      protocol: tcp
-    tty: true
-    volumes:
-    - type: bind
-      source: E:\WorkSpace\microservices\activities_v3\src\Services\Activities\Activities.API
-      target: /app
-      bind:
-        create_host_path: true
-    - type: bind
-      source: E:\WorkSpace\microservices\activities_v3\src
-      target: /src
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\qbuser\vsdbg\vs2017u5
-      target: /remote_debugger
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\qbuser\.nuget\packages\
-      target: /root/.nuget/packages
-      read_only: true
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\qbuser\AppData\Roaming/ASP.NET/Https
-      target: /root/.aspnet/https
-      read_only: true
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\qbuser\AppData\Roaming/Microsoft/UserSecrets
-      target: /root/.microsoft/usersecrets
-      read_only: true
-      bind:
-        create_host_path: true
   activitiesdb:
     container_name: activitiesdb
     environment:
@@ -78,132 +37,51 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_USER: postgres
     image: postgres
-    networks:
-      default: null
     ports:
-    - mode: ingress
+    - published: 5432
       target: 5432
-      published: 5432
-      protocol: tcp
     restart: always
     volumes:
-    - type: volume
-      source: postgres_data
-      target: /var/lib/postgresql/data/
-      volume: {}
+    - postgres_data:/var/lib/postgresql/data/:rw
   booking.api:
     build:
-      context: E:\WorkSpace\microservices\activities_v3\src
-      dockerfile: E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API\Dockerfile
-      labels:
-        com.microsoft.created-by: visual-studio
-        com.microsoft.visual-studio.project-name: Booking.API
-      target: base
+      context: D:\Workspace\Projects\Microservices\Activities_Microservice_v3\src
+      dockerfile: Services/Bookings/Booking.API/Dockerfile
     container_name: booking.api
     depends_on:
       bookingdb:
         condition: service_started
-    entrypoint:
-    - tail
-    - -f
-    - /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
-      DOTNET_USE_POLLING_FILE_WATCHER: "1"
       DatabaseSettings:ConnectionString: mongodb://bookingdb:27017
-      NUGET_FALLBACK_PACKAGES: ""
-    image: bookingapi:dev
-    labels:
-      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/Booking.API.dll"'
-      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$(pidof
-        dotnet); then kill $PID; fi"
-      com.microsoft.visualstudio.debuggee.program: dotnet
-      com.microsoft.visualstudio.debuggee.workingdirectory: /app
-    networks:
-      default: null
+      GrpcSettings:ActivitiesUri: accounts.grpc
+    image: bookingapi
     ports:
-    - mode: ingress
+    - published: 8001
       target: 80
-      published: 8001
-      protocol: tcp
-    tty: true
-    volumes:
-    - type: bind
-      source: E:\WorkSpace\microservices\activities_v3\src\Services\Bookings\Booking.API
-      target: /app
-      bind:
-        create_host_path: true
-    - type: bind
-      source: E:\WorkSpace\microservices\activities_v3\src
-      target: /src
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\qbuser\vsdbg\vs2017u5
-      target: /remote_debugger
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\qbuser\.nuget\packages\
-      target: /root/.nuget/packages
-      read_only: true
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\qbuser\AppData\Roaming/ASP.NET/Https
-      target: /root/.aspnet/https
-      read_only: true
-      bind:
-        create_host_path: true
-    - type: bind
-      source: C:\Users\qbuser\AppData\Roaming/Microsoft/UserSecrets
-      target: /root/.microsoft/usersecrets
-      read_only: true
-      bind:
-        create_host_path: true
   bookingdb:
     container_name: bookingdb
     image: mongo
-    networks:
-      default: null
     ports:
-    - mode: ingress
+    - published: 27017
       target: 27017
-      published: 27017
-      protocol: tcp
     restart: always
     volumes:
-    - type: volume
-      source: mongo_data
-      target: /data/db
-      volume: {}
+    - mongo_data:/data/db:rw
   pgadmin:
     container_name: pgadmin
     environment:
       PGADMIN_DEFAULT_EMAIL: dev@mail.com
       PGADMIN_DEFAULT_PASSWORD: password
     image: dpage/pgadmin4
-    networks:
-      default: null
     ports:
-    - mode: ingress
+    - published: 5050
       target: 80
-      published: 5050
-      protocol: tcp
     restart: always
     volumes:
-    - type: volume
-      source: pgadmin_data
-      target: /root/.pgadmin
-      volume: {}
-networks:
-  default:
-    name: dockercompose7779393614598495288_default
+    - pgadmin_data:/root/.pgadmin:rw
+version: '3.4'
 volumes:
-  mongo_data:
-    name: dockercompose7779393614598495288_mongo_data
-  pgadmin_data:
-    name: dockercompose7779393614598495288_pgadmin_data
-  postgres_data:
-    name: dockercompose7779393614598495288_postgres_data
+  mongo_data: {}
+  pgadmin_data: {}
+  postgres_data: {}

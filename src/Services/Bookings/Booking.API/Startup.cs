@@ -1,4 +1,6 @@
+using Accounts.Grpc.Protos;
 using Booking.API.Data;
+using Booking.API.GrpcServices;
 using Booking.API.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -6,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System;
 
 namespace Booking.API
 {
@@ -30,6 +33,11 @@ namespace Booking.API
 
             services.AddScoped<IEventRepository, EventRepository>();
             services.AddScoped<IBookingContext, BookingContext>();
+
+            services.AddGrpcClient<ActivitiesProtoService.ActivitiesProtoServiceClient>
+                (x => x.Address = new Uri(Configuration["GrpcSettings:ActivitiesUri"]));
+
+            services.AddScoped<ActivitiesGrpcService>();
 
             //services.AddMassTransit(config =>
             //{

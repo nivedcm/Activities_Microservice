@@ -11,9 +11,32 @@ service ActivitiesProtoService {
 }
 
 message GetActivitiesRequest {
-    string Id = 1;
+	string Id = 1;
 }
 
 message ActivitiesModel {
-	
+	string Id = 1;
+	string Title  = 2;
+	string Description = 3;
+	string Category = 4;
+	string City = 5;
+	string Venue = 6;
+	string Date  = 7;
+}
+
+message CreateActivitiesRequest {
+	ActivitiesModel activity = 1;
+}
+
+message UpdateActivitiesRequest {
+	ActivitiesModel activity = 1;	
+}
+
+message DeleteActivitiesRequest {
+	string Id = 1; 
+	string ActivityName = 2; 
+}
+
+message DeleteActivitiesResponse {
+	bool success =1;
 }

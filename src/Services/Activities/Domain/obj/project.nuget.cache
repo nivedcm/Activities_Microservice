@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vi9En4tp1pu6UqRHIh7Vp+VSq6jtpxRMjw1dcy9Bdq5K3vr9yC5ICmQF3so9UFUwTNgaRel4kOiNX3UAJpcGLA==",
+  "dgSpecHash": "VlK2zSbaiRJx34ehRqa9jb9KtAOtUVkQjvqL29LEcnsHyMVlp72J5gKTV6N8KF1Tv5dbL6dvh63U4MCKy9Ntig==",
   "success": true,
-  "projectFilePath": "E:\\WorkSpace\\microservices\\activities_v3\\src\\Services\\Activities\\Domain\\Domain.csproj",
+  "projectFilePath": "D:\\Workspace\\Projects\\Microservices\\Activities_Microservice_v3\\src\\Services\\Activities\\Domain\\Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

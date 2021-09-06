@@ -1,5 +1,6 @@
 using Booking.API.Controllers;
 using Booking.API.Entities;
+using Booking.API.GrpcServices;
 using Booking.API.Repositories;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc;
@@ -17,8 +18,10 @@ namespace Booking.UnitTests
         {
             // Arrange
             var repositoryStub = new Mock<IEventRepository>();
+            var grpcStub = new Mock<ActivitiesGrpcService>();
+
             repositoryStub.Setup(repo => repo.GetEvents(It.IsAny<string>())).ReturnsAsync((Event)null);
-            var controller = new BookingsController(repositoryStub.Object);
+            var controller = new BookingsController(repositoryStub.Object, grpcStub.Object);
 
             // Act - testing with invalid event Id
             var result = await controller.GetEventById("testId5466");
@@ -32,9 +35,10 @@ namespace Booking.UnitTests
         {
             // Arrange
             var item = CreateEvent();
+            var grpcStub = new Mock<ActivitiesGrpcService>();
             var repositoryStub = new Mock<IEventRepository>();
             repositoryStub.Setup(repo => repo.DeleteEvent(It.IsAny<string>())).ReturnsAsync(true);
-            var controller = new BookingsController(repositoryStub.Object);
+            var controller = new BookingsController(repositoryStub.Object, grpcStub.Object);
 
             // Act 
             var result = await controller.DeleteEventById("123456");
@@ -48,10 +52,11 @@ namespace Booking.UnitTests
         [Fact]
         public async Task GetEvents_WithExistingItem_ReturResultAsync()
         {
+            var grpcStub = new Mock<ActivitiesGrpcService>();
             var expectedEvent = CreateEvent();
             var repositoryStub = new Mock<IEventRepository>();
             repositoryStub.Setup(repo => repo.GetEvents(It.IsAny<string>())).ReturnsAsync(expectedEvent);
-            var controller = new BookingsController(repositoryStub.Object);
+            var controller = new BookingsController(repositoryStub.Object, grpcStub.Object);
 
             // testing with invalid event Id
             var result = await controller.GetEventById("123456");
@@ -67,10 +72,11 @@ namespace Booking.UnitTests
         public async Task GetEventsByCategory_WithValidItem_ReturnSuccess()
         {
             // Arrange
+            var grpcStub = new Mock<ActivitiesGrpcService>();
             var repositoryStub = new Mock<IEventRepository>();
             var items = CreateEvents().FindAll(x => x.Category == "Music");
             repositoryStub.Setup(repo => repo.GetEventsByCategory(It.IsAny<string>())).ReturnsAsync(items);
-            var controller = new BookingsController(repositoryStub.Object);
+            var controller = new BookingsController(repositoryStub.Object, grpcStub.Object);
 
             // Act 
             var result = await controller.GetEventsByCategory("Music");

@@ -23,6 +23,12 @@ services:
       context: .
       dockerfile: Services/Activities/Activities.API/Dockerfile
 
+  accounts.grpc:
+    image: ${DOCKER_REGISTRY-}accountsgrpc
+    build:
+      context: .
+      dockerfile: Services/Activities/Accounts.Grpc/Dockerfile
+
 volumes:
   mongo_data: 
   postgres_data:

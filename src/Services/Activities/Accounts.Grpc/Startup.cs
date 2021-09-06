@@ -1,4 +1,5 @@
-﻿using Application.Repositories;
+﻿using Activities.Grpc.Services;
+using Application.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -14,6 +15,7 @@ namespace Accounts.Grpc
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IActivitiesRepository, ActivitiesRepository>();
+            services.AddAutoMapper(typeof(Startup));
             services.AddGrpc();
         }
 
@@ -29,6 +31,8 @@ namespace Accounts.Grpc
 
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapGrpcService<ActivitiesService>();
+
                 endpoints.MapGrpcService<GreeterService>();
 
                 endpoints.MapGet("/", async context =>
